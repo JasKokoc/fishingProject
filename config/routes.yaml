@@ -1,0 +1,6 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+#index:
+#    path: /hello/{name}
+#    controller: 'App\Controller\DefaultController::index'
