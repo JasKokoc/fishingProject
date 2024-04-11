@@ -25,7 +25,7 @@ class AppFixtures extends Fixture
 
             $user = new User();
             $user->setName($this->faker->firstName);
-            $user->setSecondName($this->faker->lastName);
+            $user->setLastName($this->faker->lastName);
             $user->setEmail($this->faker->unique()->safeEmail);
             $user->setPassword($this->faker->password());
             $user->setCreatedAt(new \DateTimeImmutable());
