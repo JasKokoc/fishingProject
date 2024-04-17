@@ -36,6 +36,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
+    #[ORM\Column(length: 20, nullable: true)]
+    private ?string $Phone = null;
+
 
     public function getId(): ?int
     {
@@ -141,5 +144,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getPhone(): ?string
+    {
+        return $this->Phone;
+    }
+
+    public function setPhone(?string $Phone): static
+    {
+        $this->Phone = $Phone;
+
+        return $this;
     }
 }

@@ -29,6 +29,7 @@ class AppFixtures extends Fixture
             $user->setEmail($this->faker->unique()->safeEmail);
             $user->setPassword($this->faker->password());
             $user->setCreatedAt(new \DateTimeImmutable());
+            $user->setPhone($this->faker->phoneNumber);
 
             $manager->persist($user);
         }
