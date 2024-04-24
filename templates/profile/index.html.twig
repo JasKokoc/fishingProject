@@ -1,21 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Profile{% endblock %}
+{% block title %}Профиль{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
 
-<div class="example-wrapper">
-    <h1>Profile</h1>
-    <br>
-    <ul class="list-group">
-        <li class="list-group-item">Name: {{ user.name }}</li>
-        <li class="list-group-item">Lastname: {{ user.lastName }}</li>
-        <li class="list-group-item">Email: {{ user.email }}</li>
-        <li class="list-group-item">Phone: {{ user.phone }}</li>
-    </ul>
-</div>
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Профиль</h1>
+        <br>
+        <ul class="list-group">
+            <li class="list-group-item">Имя: {{ user.name }}</li>
+            <li class="list-group-item">Фамилия: {{ user.lastName }}</li>
+            <li class="list-group-item">E-mail: {{ user.email }}</li>
+            <li class="list-group-item">Телефон: {{ user.phone }}</li>
+        </ul>
+    </div>
 {% endblock %}

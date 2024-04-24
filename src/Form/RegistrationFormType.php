@@ -23,7 +23,7 @@ class RegistrationFormType extends AbstractType
                 'constraints' =>
                     [
                         new NotBlank([
-                            'message' => 'Please enter your name.',
+                            'message' => 'Введите имя',
                         ]),
                     ],
             ])
@@ -32,7 +32,7 @@ class RegistrationFormType extends AbstractType
                 'constraints' =>
                     [
                         new Email([
-                        'message' => 'Please enter a valid email address.',
+                        'message' => 'Введите корректный E-mail',
                         ]),
                     ],
             ])
@@ -40,11 +40,11 @@ class RegistrationFormType extends AbstractType
                 'constraints' =>
                     [
                         new NotBlank([
-                            'message' => 'Please enter a password',
+                            'message' => 'Введите пароль',
                         ]),
                         new Length([
                             'min' => 6,
-                            'minMessage' => 'Your password should be at least 6 characters',
+                            'minMessage' => 'Пароль должен содержать не менее 6 символов',
                             // max length allowed by Symfony for security reasons
                             'max' => 4096,
                         ]),
@@ -54,7 +54,7 @@ class RegistrationFormType extends AbstractType
                 'constraints' =>
                 [
                     new NotBlank([
-                        'message' => 'Please enter your phone number.',
+                        'message' => 'Введите ваш номер телефона',
                     ])
                 ]
             ]);
